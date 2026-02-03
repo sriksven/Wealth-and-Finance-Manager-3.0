@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages SPA redirect handler
+    // This script takes the current URL and converts the path and query string
+    // into a hash that our SPA router can handle
+    
+    var pathSegmentsToKeep = 1; // Keep '/Wealth-and-Finance-Manager-2.0'
+    
+    var l = window.location;
+    var path = l.pathname.split('/').slice(0, pathSegmentsToKeep + 1).join('/') + '/';
+    var route = l.pathname.slice(path.length - 1);
+    
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      path + '?redirect=' + encodeURIComponent(route) +
+      (l.search ? '&' + l.search.slice(1) : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>

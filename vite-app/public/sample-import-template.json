@@ -1,0 +1,76 @@
+{
+    "version": "1.0",
+    "exportDate": "2026-01-20T23:52:00.000Z",
+    "accounts": [
+        {
+            "id": "acc_sample_checking",
+            "name": "Sample Checking Account",
+            "type": "asset",
+            "category": "Cash and Cash Equivalents",
+            "createdAt": "2026-01-01T00:00:00.000Z"
+        }
+    ],
+    "balances": [
+        {
+            "id": "bal_sample_1",
+            "accountId": "acc_sample_checking",
+            "amount": 1000.00,
+            "date": "2026-01-20T00:00:00.000Z"
+        }
+    ],
+    "transactions": [
+        {
+            "id": "txn_sample_expense",
+            "type": "expense",
+            "amount": 50.00,
+            "category": "Groceries",
+            "reason": "Sample grocery purchase",
+            "date": "2026-01-20T00:00:00.000Z",
+            "month": "January",
+            "year": "2026",
+            "paymentMethod": "Credit Card",
+            "accountId": "acc_sample_checking",
+            "time": "14:30:00"
+        },
+        {
+            "id": "txn_sample_income",
+            "type": "income",
+            "amount": 3000.00,
+            "category": "Salary",
+            "reason": "Monthly salary",
+            "source": "Sample Employer",
+            "date": "2026-01-15T00:00:00.000Z",
+            "month": "January",
+            "year": "2026",
+            "paymentMethod": "Direct Deposit",
+            "accountId": "acc_sample_checking"
+        }
+    ],
+    "cards": [
+        {
+            "id": "card_sample_credit",
+            "name": "Sample Credit Card",
+            "type": "credit",
+            "bank": "Sample Bank",
+            "creditLimit": 5000,
+            "currentBalance": 100.00,
+            "availableCredit": 4900,
+            "lastFour": "1234",
+            "expiryDate": "12/28",
+            "isActive": true,
+            "closingDate": 15,
+            "createdAt": "2026-01-01T00:00:00.000Z"
+        }
+    ],
+    "card_transactions": [
+        {
+            "id": "ctx_sample_charge",
+            "cardId": "card_sample_credit",
+            "transactionId": "txn_sample_expense",
+            "amount": 50.00,
+            "type": "charge",
+            "date": "2026-01-20T00:00:00.000Z",
+            "description": "Sample grocery purchase"
+        }
+    ]
+}
